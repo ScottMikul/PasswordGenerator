@@ -1,0 +1,24 @@
+.dotted-password-results{
+    border-style: dashed;
+    border-width: 2px;
+    border-color: lightgrey;
+    text-align: center;
+    height:200px;
+}
+.centered{
+    text-align: center;
+}
+
+.background-white{
+    background-color: white;
+}
+
+body{
+    background-color: whitesmoke;
+}
+.text-dark-gray{
+    color:darkgray;
+}
+.results-top-padding{
+    padding-top:54px;
+}

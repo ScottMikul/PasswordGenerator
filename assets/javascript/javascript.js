@@ -5,8 +5,7 @@ for(var i=0;i<26;i++){
     console.log("letter is "+ letter);
     uppercaseLetters.push(letter);
     console.log("lowercase letter is "+ letter.toLowerCase());
-    lowercaseLetters.push(letter.toLowerCase());
-    
+    lowercaseLetters.push(letter.toLowerCase());    
 }
 
 var numbers = "0123456789";
@@ -14,15 +13,12 @@ var numbersArr = numbers.split("");
 var specialChars = " !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
 var specialCharsArr = specialChars.split("");
 
-
 function generatePassword(){
     var preferedChars = [];
     var resultPass = "";
     var resEl = document.getElementById("copy-button");
     resEl.classList.remove("btn-primary");
     resEl.classList.add("btn-light");
-    
-
     var passLength = prompt("how many characters would you like your password to be?");
     if(passLength <8 || passLength > 128){
         alert("your password must be between 8 and 128 characters long.");
@@ -36,13 +32,10 @@ function generatePassword(){
         }
         if(confirm("would you like your password to have numbers?")){
             Array.prototype.push.apply(preferedChars, numbersArr);
-
         }
         if(confirm("would you like your password to have special characters")){
             Array.prototype.push.apply(preferedChars, specialCharsArr);
-
         }
-        
         if(preferedChars.length===0){
             alert("you must select at least 1 type of characters");
         }
@@ -53,12 +46,9 @@ function generatePassword(){
             }
             resEl.classList.remove("btn-light");
             resEl.classList.add("btn-primary");
-
         }
-       
     }
     document.getElementById("results").innerHTML = resultPass;
-
 
 }
 

@@ -18,6 +18,11 @@ var specialCharsArr = specialChars.split("");
 function generatePassword(){
     var preferedChars = [];
     var resultPass = "";
+    var resEl = document.getElementById("copy-button");
+    resEl.classList.remove("btn-primary");
+    resEl.classList.add("btn-light");
+    
+
     var passLength = prompt("how many characters would you like your password to be?");
     if(passLength <8 || passLength > 128){
         alert("your password must be between 8 and 128 characters long.");
@@ -37,6 +42,7 @@ function generatePassword(){
             Array.prototype.push.apply(preferedChars, specialCharsArr);
 
         }
+        
         if(preferedChars.length===0){
             alert("you must select at least 1 type of characters");
         }
@@ -45,9 +51,13 @@ function generatePassword(){
                 var randomIndex = Math.floor(Math.random()*preferedChars.length);
                 resultPass += preferedChars[randomIndex];
             }
-            document.getElementById("results").innerHTML = resultPass;
+            resEl.classList.remove("btn-light");
+            resEl.classList.add("btn-primary");
+
         }
+       
     }
+    document.getElementById("results").innerHTML = resultPass;
 
 
 }

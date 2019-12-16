@@ -5,6 +5,9 @@
     text-align: center;
     height:200px;
 }
+button{
+    border-radius: 12px !important;
+}
 .centered{
     text-align: center;
 }

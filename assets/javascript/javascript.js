@@ -55,16 +55,19 @@ function generatePassword(){
 }
 
 // creates an input element. stores the value of the results id, copies to clipboard, then removes the input when done
-function copyToClipboard(element) {
+function copyToClipboard() {
+    //create element
     var $temp = $("<input>");
     $("#results").append($temp);
+    //get text from results
     var resultsText =   $("#results").text();
-    console.log("resultsText = "+ resultsText);
+    //set value of textfield to text
     $temp.val(resultsText);
-    console.log("$temp.val = "+ $temp.val());
     $temp.select();
     document.execCommand("copy");
+
     alert("you have put the following on your clipboard: \n"+ $temp.val());
+
     $temp.remove();
 
   }

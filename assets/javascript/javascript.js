@@ -19,6 +19,7 @@ function generatePassword(){
     var resEl = document.getElementById("copy-button");
     resEl.classList.remove("btn-primary");
     resEl.classList.add("btn-light");
+    resEl.setAttribute("disabled",true);
     var passLength = prompt("how many characters would you like your password to be?");
     if(passLength <8 || passLength > 128){
         alert("your password must be between 8 and 128 characters long.");
@@ -44,6 +45,7 @@ function generatePassword(){
                 var randomIndex = Math.floor(Math.random()*preferedChars.length);
                 resultPass += preferedChars[randomIndex];
             }
+            resEl.removeAttribute("disabled");
             resEl.classList.remove("btn-light");
             resEl.classList.add("btn-primary");
         }

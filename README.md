@@ -7,6 +7,9 @@ With this password generator you can create a secure password of any length you 
 # Repo:
 https://github.com/ScottMikul/PasswordGenerator
 
-Static page demo: 
+# Static page demo: 
 https://scottmikul.github.io/PasswordGenerator/
+
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
